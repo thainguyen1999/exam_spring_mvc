@@ -32,7 +32,7 @@ public class EmployeeController {
             return view;
     }
     @PostMapping("/create")
-    public  String saveEmployee(@ModelAttribute("employee") Employee employee, ModelMap modelMap){
+    public  String saveEmployee( Employee employee){
             String view="redirect:/employee/getAll";
             try {
                employeeService.saveEmployee(employee);
